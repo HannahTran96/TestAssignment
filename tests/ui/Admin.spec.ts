@@ -13,7 +13,7 @@ const searchScenarios: SearchScenario[] = JSON.parse(raw);
   
   test.describe('Data-driven: Employee Search Feature', () => {
     for (const scenario of searchScenarios) {
-      test.only(`${scenario.caseId} - ${scenario.testCaseName}`, async ({ authenticatedPage, page }) => {
+      test(`${scenario.caseId} - ${scenario.testCaseName}`, async ({ authenticatedPage, page }) => {
         // Ensure we're on Admin page
         await authenticatedPage.click('a[href*="viewAdminModule"]');
         await expect(authenticatedPage).toHaveURL(/admin/);
