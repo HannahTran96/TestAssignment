@@ -1,5 +1,4 @@
 name: Playwright Tests
-
 on:
   push:
     branches: [ main, master ]
@@ -7,45 +6,28 @@ on:
     branches: [ main, master ]
   schedule:
     - cron: "50 0 * * *"
-
 jobs:
   runTestOnPullRequest:
     if: github.event_name == 'pull_request'
     name: Execute UI on Pull request
     timeout-minutes: 60
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
-
-    - name: Install system dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y \
-          libgtk-3-0 libgtk-4-1 libgraphene-1.0-0 libwoff1 libwoff2-1 \
-          libvpx7 libevent-2.1-7 libopus0 libgstreamer1.0-0 \
-          libgstreamer-plugins-base1.0-0 gstreamer1.0-plugins-base \
-          gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav \
-          libflite1 libavif13 libharfbuzz-icu0 libsecret-1-0 libhyphen0 \
-          libmanette-0.2-0 libgles2 libx264-155
-
-    - name: Install Node.js dependencies
-      run: |
+    - name: Install Chromium Browsers with dependencies
+      continue-on-error: true
+      run: |-
         npm ci
         npm install
-
-    - name: Install Playwright Browsers
-      run: npx playwright install
-
+        npx playwright install --with-deps
     - name: Run UI smoke tests
       run: npm test
-
     - name: Publish Test Summary Results
       run: npx github-actions-ctrf ctrf/ctrf-report.json
       if: always()
-
     - name: Publish Test Report Artifact
       if: failure()
       uses: actions/upload-artifact@v4
@@ -53,13 +35,11 @@ jobs:
         name: TestResults-${{ github.run_number}}
         path: playwright-report
         retention-days: 3
-
     - name: Upload HTML report
       uses: actions/upload-artifact@v4
       with:
         name: TestResults-${{ github.run_number }}
         path: playwright-report
-
   runTestOnSchedule: 
     if: github.event_name == 'schedule'
     name: Execute UI regression test on Schedule
@@ -69,45 +49,28 @@ jobs:
       fail-fast: false
       matrix: 
         browserName: [chromium]
-
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
-
-    - name: Install system dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y \
-          libgtk-3-0 libgtk-4-1 libgraphene-1.0-0 libwoff1 libwoff2-1 \
-          libvpx7 libevent-2.1-7 libopus0 libgstreamer1.0-0 \
-          libgstreamer-plugins-base1.0-0 gstreamer1.0-plugins-base \
-          gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-libav \
-          libflite1 libavif13 libharfbuzz-icu0 libsecret-1-0 libhyphen0 \
-          libmanette-0.2-0 libgles2 libx264-155
-
     - name: Install dependencies
-      run: |
-        npm ci
-        npm install
-
+      run: npm ci
     - name: Install Playwright Browsers
-      run: npx playwright install
-
+      run: |-
+        npm install
+        npx playwright install ${{ matrix.browserName }} --with-deps
     - name: Run Playwright tests
       run: npm run regression -- --project=${{ matrix.browserName }}
-
     - name: Upload report to GitHub Actions Artifacts
       uses: actions/upload-artifact@v4
       env: 
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      if: ${{ !cancelled() }}
+      if: ${{ !cancelled()}}
       with:
         name: blob-report-${{ matrix.browserName }}
         path: blob-report/
         retention-days: 1
-
     - name: Upload ctrf report to GitHub Action Artifacts
       if: always()
       uses: actions/upload-artifact@v4
