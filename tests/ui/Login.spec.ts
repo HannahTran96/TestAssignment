@@ -11,9 +11,9 @@ const raw = fs.readFileSync(jsonPath, 'utf-8');
 const negativeLoginData: NegativeLoginScenario[] = JSON.parse(raw);
 
 test.describe('Test suite for login', {tag: ['@ui', '@login']}, async() => {
-    test('Verify that login successfull with admin role', {tag: ['@smoke', '@regression']} , async ({ loginPage, page}) => {
+    test('Verify that login successfull with admin role', {tag: ['@smoke', '@regression']} , async ({ signIn, page}) => {
         await test.step('Login by admin', async() => {
-            await login(loginPage, admin, password)
+            await login(signIn, admin, password)
         })
         await test.step('Dismiss dialog', async() => {
             autoDismissDialogs(page)
@@ -25,15 +25,15 @@ test.describe('Test suite for login', {tag: ['@ui', '@login']}, async() => {
     for (const scenario of negativeLoginData) {
         test(
           `${scenario.caseId} - ${scenario.testCaseName}`, {tag: scenario.tag},
-          async ({ loginPage }) => {
+          async ({ signIn }) => {
             await test.step('Enter user name, password and click on Login button', async() => {
-              await login(loginPage, scenario.username, scenario.password);
+              await login(signIn, scenario.username, scenario.password);
             })
             await test.step('Verify can not login and error message should be displayed', async() => {
               if(scenario.username === ' ' && scenario.password === ' ') {
-                await expect(loginPage.getByText(scenario.expectedError)).toHaveCount(2)
+                await expect(signIn.getByText(scenario.expectedError)).toHaveCount(2)
               } else {
-                await expect(loginPage.getByText(scenario.expectedError)).toBeVisible()
+                await expect(signIn.getByText(scenario.expectedError)).toBeVisible()
               }
             })
           }

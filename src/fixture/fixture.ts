@@ -2,7 +2,7 @@
 import { test as baseTest, Page } from '@playwright/test';
 import ENV from '../utils/env';
 import { admin, password } from '../utils/data';
-import { login } from '../pages/loginPage';
+import { login } from '../pages/LoginPage';
 
 type UserInfo = {
   username: string;
@@ -11,7 +11,7 @@ type UserInfo = {
 
 type Fixtures = {
   userInfo: UserInfo;
-  loginPage: Page;
+  signIn: Page;
   authenticatedPage: Page;
 };
 
@@ -23,7 +23,7 @@ const test = baseTest.extend<Fixtures>({
     });
   },
 
-  loginPage: async ({ page }, use) => {
+  signIn: async ({ page }, use) => {
     await page.goto(ENV.BASE_URL);
     await use(page);
   },
