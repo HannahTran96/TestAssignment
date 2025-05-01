@@ -13,7 +13,7 @@ jobs:
     if: github.event_name == 'pull_request'
     name: Execute UI on Pull request
     timeout-minutes: 60
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
