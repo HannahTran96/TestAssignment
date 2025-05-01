@@ -12,6 +12,7 @@ This repository contains UI test automation for the **OrangeHRM demo application
 - [Getting Started](#getting-started)
 - [Test Execution](#test-execution)
 - [CI/CD Integration with GitHub Actions](#cicd-integration-with-github-actions)
+- [Framework Structure and Rationale](#framework-structure-and-rationale)
 
 ---
 
@@ -27,6 +28,38 @@ This project uses **Playwright** to perform automated testing on the **OrangeHRM
 
 ---
 
+## Framework Structure and Rationale
+### Framework Structure
+
+The framework is organized into several key components:
+
+1. **Test Directory** (`/tests`): This directory contains all the test scripts organized by test types. For instance, UI tests, regression tests, smoke tests, etc. The tests are written using **Playwright** APIs, which provide powerful capabilities for browser automation.
+
+2. **Pages Directory** (`/src/pages`): The Page Object Model (POM) is used to separate the test code from the browser interaction logic. This directory contains reusable page objects that are used across multiple tests.
+
+3. **Fixtures** (`/src/fixture`): Fixtures provide a way to initialize and manage common states for tests. They could contain logic for logging in, setting up test data, and clearing states before/after tests.
+
+4. **Test Configuration** (`/playwright.config.ts`): The configuration file to customize Playwright settings such as browser options, timeout values, retries, and projects.
+
+5. **GitHub Actions Workflow** (`/.github/workflows/`): This folder contains the YAML files for configuring the CI/CD pipeline using GitHub Actions. It triggers tests when a pull request is created or updated, and on a schedule.
+
+### Rationale Behind Framework Decisions
+
+1. **Playwright**:
+   - **Playwright** is chosen because of its ability to automate modern web applications across multiple browsers (Chromium, Firefox, WebKit). It supports both headless and headed browser modes, making it ideal for CI/CD automation.
+   - Playwright also offers powerful tools for interacting with page elements, handling pop-ups, capturing screenshots, and running tests in parallel, which is critical for scaling tests in a continuous integration pipeline.
+
+2. **Page Object Model (POM)**:
+   - The **Page Object Model (POM)** is used to ensure maintainability and scalability of the test suite. By organizing browser interactions into reusable components (pages), tests become more readable and easier to update when the application UI changes.
+
+3. **GitHub Actions**:
+   - **GitHub Actions** is used for Continuous Integration (CI) and Continuous Deployment (CD). By using GitHub Actions, tests are automatically run on each pull request, ensuring that no breaking changes are introduced. The integration with GitHub allows for seamless triggering of tests on commit, PR, or on a scheduled basis.
+   - The workflow is configured to execute tests on the `main` and `master` branches and provide useful feedback on the status of the tests via the CTRf report format. The results can be viewed directly within GitHub Actions.
+
+4. **CTRf Report**:
+   - **CTRf Report** format is used for reporting test results as it provides a structured format that is easy to parse and understand. It provides detailed information on test outcomes, including failed, skipped, and flaky tests, which is crucial for analyzing test stability and identifying issues early.
+
+---
 ## Getting Started
 
 To get started with this project, you'll need to have **Node.js** and **npm** installed. Then, clone the repository and install the necessary dependencies.
