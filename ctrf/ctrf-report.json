@@ -4,23 +4,182 @@
       "name": "playwright"
     },
     "summary": {
-      "tests": 6,
-      "passed": 6,
+      "tests": 9,
+      "passed": 9,
       "failed": 0,
       "pending": 0,
       "skipped": 0,
       "other": 0,
-      "start": 1746093320327,
-      "stop": 1746093341065,
+      "start": 1746105957875,
+      "stop": 1746105981794,
       "suites": 0
     },
     "tests": [
       {
+        "name": "SEARCH_01 - Search by exact username",
+        "status": "passed",
+        "duration": 12918,
+        "start": 1746105958,
+        "stop": 1746105971,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "/Users/macbook/Documents/automation/TestAssignment/tests/ui/Admin.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "steps": [
+          {
+            "name": "Enter user name",
+            "status": "passed"
+          },
+          {
+            "name": "Enter password",
+            "status": "passed"
+          },
+          {
+            "name": "Click on Login button",
+            "status": "passed"
+          },
+          {
+            "name": "Fill search value to user name field",
+            "status": "passed"
+          },
+          {
+            "name": "Click on Search button",
+            "status": "passed"
+          }
+        ],
+        "suite": "chromium > ui/Admin.spec.ts > Data-driven: Employee Search Feature",
+        "attachments": [
+          {
+            "name": "screenshot",
+            "contentType": "image/png",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Admin-Data-driven-Emplo-f4c6a----Search-by-exact-username-chromium/test-finished-1.png"
+          },
+          {
+            "name": "trace",
+            "contentType": "application/zip",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Admin-Data-driven-Emplo-f4c6a----Search-by-exact-username-chromium/trace.zip"
+          }
+        ],
+        "stdout": [],
+        "stderr": [],
+        "extra": {
+          "annotations": []
+        }
+      },
+      {
+        "name": "SEARCH_02 - Search by invalid username",
+        "status": "passed",
+        "duration": 13056,
+        "start": 1746105958,
+        "stop": 1746105971,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "/Users/macbook/Documents/automation/TestAssignment/tests/ui/Admin.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "steps": [
+          {
+            "name": "Enter user name",
+            "status": "passed"
+          },
+          {
+            "name": "Enter password",
+            "status": "passed"
+          },
+          {
+            "name": "Click on Login button",
+            "status": "passed"
+          },
+          {
+            "name": "Fill search value to user name field",
+            "status": "passed"
+          },
+          {
+            "name": "Click on Search button",
+            "status": "passed"
+          }
+        ],
+        "suite": "chromium > ui/Admin.spec.ts > Data-driven: Employee Search Feature",
+        "attachments": [
+          {
+            "name": "screenshot",
+            "contentType": "image/png",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Admin-Data-driven-Emplo-90088--Search-by-invalid-username-chromium/test-finished-1.png"
+          },
+          {
+            "name": "trace",
+            "contentType": "application/zip",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Admin-Data-driven-Emplo-90088--Search-by-invalid-username-chromium/trace.zip"
+          }
+        ],
+        "stdout": [],
+        "stderr": [],
+        "extra": {
+          "annotations": []
+        }
+      },
+      {
+        "name": "SEARCH_04 - Search with special characters",
+        "status": "passed",
+        "duration": 12369,
+        "start": 1746105958,
+        "stop": 1746105970,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "/Users/macbook/Documents/automation/TestAssignment/tests/ui/Admin.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "steps": [
+          {
+            "name": "Enter user name",
+            "status": "passed"
+          },
+          {
+            "name": "Enter password",
+            "status": "passed"
+          },
+          {
+            "name": "Click on Login button",
+            "status": "passed"
+          },
+          {
+            "name": "Fill search value to user name field",
+            "status": "passed"
+          },
+          {
+            "name": "Click on Search button",
+            "status": "passed"
+          }
+        ],
+        "suite": "chromium > ui/Admin.spec.ts > Data-driven: Employee Search Feature",
+        "attachments": [
+          {
+            "name": "screenshot",
+            "contentType": "image/png",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Admin-Data-driven-Emplo-00adc-rch-with-special-characters-chromium/test-finished-1.png"
+          },
+          {
+            "name": "trace",
+            "contentType": "application/zip",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Admin-Data-driven-Emplo-00adc-rch-with-special-characters-chromium/trace.zip"
+          }
+        ],
+        "stdout": [],
+        "stderr": [],
+        "extra": {
+          "annotations": []
+        }
+      },
+      {
         "name": "Verify that login successfull with admin role",
         "status": "passed",
-        "duration": 10509,
-        "start": 1746093320,
-        "stop": 1746093331,
+        "duration": 9633,
+        "start": 1746105958,
+        "stop": 1746105967,
         "rawStatus": "passed",
         "tags": [],
         "type": "e2e",
@@ -53,17 +212,17 @@
             "status": "passed"
           }
         ],
-        "suite": "firefox > ui/Login.spec.ts > Test suite for login",
+        "suite": "chromium > ui/Login.spec.ts > Test suite for login",
         "attachments": [
           {
             "name": "screenshot",
             "contentType": "image/png",
-            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-fcfcf-successfull-with-admin-role-firefox/test-finished-1.png"
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-fcfcf-successfull-with-admin-role-chromium/test-finished-1.png"
           },
           {
             "name": "trace",
             "contentType": "application/zip",
-            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-fcfcf-successfull-with-admin-role-firefox/trace.zip"
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-fcfcf-successfull-with-admin-role-chromium/trace.zip"
           }
         ],
         "stdout": [],
@@ -75,9 +234,9 @@
       {
         "name": "LOGIN_04 - Login with invalid password",
         "status": "passed",
-        "duration": 12744,
-        "start": 1746093320,
-        "stop": 1746093333,
+        "duration": 7004,
+        "start": 1746105968,
+        "stop": 1746105975,
         "rawStatus": "passed",
         "tags": [],
         "type": "e2e",
@@ -106,17 +265,17 @@
             "status": "passed"
           }
         ],
-        "suite": "firefox > ui/Login.spec.ts > Test suite for login",
+        "suite": "chromium > ui/Login.spec.ts > Test suite for login",
         "attachments": [
           {
             "name": "screenshot",
             "contentType": "image/png",
-            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-2e35b-Login-with-invalid-password-firefox/test-finished-1.png"
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-2e35b-Login-with-invalid-password-chromium/test-finished-1.png"
           },
           {
             "name": "trace",
             "contentType": "application/zip",
-            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-2e35b-Login-with-invalid-password-firefox/trace.zip"
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-2e35b-Login-with-invalid-password-chromium/trace.zip"
           }
         ],
         "stdout": [],
@@ -128,9 +287,9 @@
       {
         "name": "LOGIN_05 - Login with invalid username",
         "status": "passed",
-        "duration": 12429,
-        "start": 1746093320,
-        "stop": 1746093333,
+        "duration": 7165,
+        "start": 1746105971,
+        "stop": 1746105978,
         "rawStatus": "passed",
         "tags": [],
         "type": "e2e",
@@ -159,17 +318,17 @@
             "status": "passed"
           }
         ],
-        "suite": "firefox > ui/Login.spec.ts > Test suite for login",
+        "suite": "chromium > ui/Login.spec.ts > Test suite for login",
         "attachments": [
           {
             "name": "screenshot",
             "contentType": "image/png",
-            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-b6ff8-Login-with-invalid-username-firefox/test-finished-1.png"
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-b6ff8-Login-with-invalid-username-chromium/test-finished-1.png"
           },
           {
             "name": "trace",
             "contentType": "application/zip",
-            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-b6ff8-Login-with-invalid-username-firefox/trace.zip"
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-b6ff8-Login-with-invalid-username-chromium/trace.zip"
           }
         ],
         "stdout": [],
@@ -181,9 +340,9 @@
       {
         "name": "LOGIN_06 - Login with empty username",
         "status": "passed",
-        "duration": 7601,
-        "start": 1746093320,
-        "stop": 1746093328,
+        "duration": 5983,
+        "start": 1746105971,
+        "stop": 1746105977,
         "rawStatus": "passed",
         "tags": [],
         "type": "e2e",
@@ -212,17 +371,17 @@
             "status": "passed"
           }
         ],
-        "suite": "firefox > ui/Login.spec.ts > Test suite for login",
+        "suite": "chromium > ui/Login.spec.ts > Test suite for login",
         "attachments": [
           {
             "name": "screenshot",
             "contentType": "image/png",
-            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-4f267---Login-with-empty-username-firefox/test-finished-1.png"
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-4f267---Login-with-empty-username-chromium/test-finished-1.png"
           },
           {
             "name": "trace",
             "contentType": "application/zip",
-            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-4f267---Login-with-empty-username-firefox/trace.zip"
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-4f267---Login-with-empty-username-chromium/trace.zip"
           }
         ],
         "stdout": [],
@@ -234,9 +393,9 @@
       {
         "name": "LOGIN_07 - Login with empty password",
         "status": "passed",
-        "duration": 6572,
-        "start": 1746093330,
-        "stop": 1746093337,
+        "duration": 6459,
+        "start": 1746105971,
+        "stop": 1746105978,
         "rawStatus": "passed",
         "tags": [],
         "type": "e2e",
@@ -265,17 +424,17 @@
             "status": "passed"
           }
         ],
-        "suite": "firefox > ui/Login.spec.ts > Test suite for login",
+        "suite": "chromium > ui/Login.spec.ts > Test suite for login",
         "attachments": [
           {
             "name": "screenshot",
             "contentType": "image/png",
-            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-2b8c8---Login-with-empty-password-firefox/test-finished-1.png"
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-2b8c8---Login-with-empty-password-chromium/test-finished-1.png"
           },
           {
             "name": "trace",
             "contentType": "application/zip",
-            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-2b8c8---Login-with-empty-password-firefox/trace.zip"
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-2b8c8---Login-with-empty-password-chromium/trace.zip"
           }
         ],
         "stdout": [],
@@ -287,9 +446,9 @@
       {
         "name": "LOGIN_08 - Login with both username and password empty",
         "status": "passed",
-        "duration": 6492,
-        "start": 1746093334,
-        "stop": 1746093340,
+        "duration": 6298,
+        "start": 1746105975,
+        "stop": 1746105981,
         "rawStatus": "passed",
         "tags": [],
         "type": "e2e",
@@ -318,17 +477,17 @@
             "status": "passed"
           }
         ],
-        "suite": "firefox > ui/Login.spec.ts > Test suite for login",
+        "suite": "chromium > ui/Login.spec.ts > Test suite for login",
         "attachments": [
           {
             "name": "screenshot",
             "contentType": "image/png",
-            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-73579-username-and-password-empty-firefox/test-finished-1.png"
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-73579-username-and-password-empty-chromium/test-finished-1.png"
           },
           {
             "name": "trace",
             "contentType": "application/zip",
-            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-73579-username-and-password-empty-firefox/trace.zip"
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-73579-username-and-password-empty-chromium/trace.zip"
           }
         ],
         "stdout": [],
