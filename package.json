@@ -1,0 +1,23 @@
+{
+  "name": "testassignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env test_env=dev npx playwright test",
+    "staging": "cross-env test_env=staging npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.3"
+  },
+  "dependencies": {
+    "blob": "^0.1.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.5.0",
+    "playwright-ctrf-json-reporter": "^0.0.20"
+  }
+}

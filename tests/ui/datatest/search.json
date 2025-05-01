@@ -1,0 +1,35 @@
+[
+    {
+      "tag": "@smoke",
+      "caseId": "SEARCH_01",
+      "testCaseName": "Search by exact username",
+      "searchfiled": "Username",
+      "value": "Admin",
+      "expectResults": true
+    },
+    {
+      "tag": "@regression",
+      "caseId": "SEARCH_02",
+      "testCaseName": "Search by invalid username",
+      "searchfiled": "Username",
+      "value": "unknown_user",
+      "expectResults": false
+    },
+    {
+      "tag": "@regression",
+      "caseId": "SEARCH_03",
+      "testCaseName": "Search with empty username",
+      "searchfiled": "Username",
+      "value": "",
+      "expectResults": true
+    },
+    {
+      "tag": "@regression",
+      "caseId": "SEARCH_04",
+      "testCaseName": "Search with special characters",
+      "searchfiled": "Username",
+      "value": "@#$%",
+      "expectResults": false
+    }
+  ]
+  

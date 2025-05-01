@@ -1,0 +1,342 @@
+{
+  "results": {
+    "tool": {
+      "name": "playwright"
+    },
+    "summary": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1746093320327,
+      "stop": 1746093341065,
+      "suites": 0
+    },
+    "tests": [
+      {
+        "name": "Verify that login successfull with admin role",
+        "status": "passed",
+        "duration": 10509,
+        "start": 1746093320,
+        "stop": 1746093331,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "/Users/macbook/Documents/automation/TestAssignment/tests/ui/Login.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "steps": [
+          {
+            "name": "Login by admin",
+            "status": "passed"
+          },
+          {
+            "name": "Enter user name",
+            "status": "passed"
+          },
+          {
+            "name": "Enter password",
+            "status": "passed"
+          },
+          {
+            "name": "Click on Login button",
+            "status": "passed"
+          },
+          {
+            "name": "Dismiss dialog",
+            "status": "passed"
+          },
+          {
+            "name": "Verify that user will be automatically redirected to Dashboard page after login",
+            "status": "passed"
+          }
+        ],
+        "suite": "firefox > ui/Login.spec.ts > Test suite for login",
+        "attachments": [
+          {
+            "name": "screenshot",
+            "contentType": "image/png",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-fcfcf-successfull-with-admin-role-firefox/test-finished-1.png"
+          },
+          {
+            "name": "trace",
+            "contentType": "application/zip",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-fcfcf-successfull-with-admin-role-firefox/trace.zip"
+          }
+        ],
+        "stdout": [],
+        "stderr": [],
+        "extra": {
+          "annotations": []
+        }
+      },
+      {
+        "name": "LOGIN_04 - Login with invalid password",
+        "status": "passed",
+        "duration": 12744,
+        "start": 1746093320,
+        "stop": 1746093333,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "/Users/macbook/Documents/automation/TestAssignment/tests/ui/Login.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "steps": [
+          {
+            "name": "Enter user name, password and click on Login button",
+            "status": "passed"
+          },
+          {
+            "name": "Enter user name",
+            "status": "passed"
+          },
+          {
+            "name": "Enter password",
+            "status": "passed"
+          },
+          {
+            "name": "Click on Login button",
+            "status": "passed"
+          },
+          {
+            "name": "Verify can not login and error message should be displayed",
+            "status": "passed"
+          }
+        ],
+        "suite": "firefox > ui/Login.spec.ts > Test suite for login",
+        "attachments": [
+          {
+            "name": "screenshot",
+            "contentType": "image/png",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-2e35b-Login-with-invalid-password-firefox/test-finished-1.png"
+          },
+          {
+            "name": "trace",
+            "contentType": "application/zip",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-2e35b-Login-with-invalid-password-firefox/trace.zip"
+          }
+        ],
+        "stdout": [],
+        "stderr": [],
+        "extra": {
+          "annotations": []
+        }
+      },
+      {
+        "name": "LOGIN_05 - Login with invalid username",
+        "status": "passed",
+        "duration": 12429,
+        "start": 1746093320,
+        "stop": 1746093333,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "/Users/macbook/Documents/automation/TestAssignment/tests/ui/Login.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "steps": [
+          {
+            "name": "Enter user name, password and click on Login button",
+            "status": "passed"
+          },
+          {
+            "name": "Enter user name",
+            "status": "passed"
+          },
+          {
+            "name": "Enter password",
+            "status": "passed"
+          },
+          {
+            "name": "Click on Login button",
+            "status": "passed"
+          },
+          {
+            "name": "Verify can not login and error message should be displayed",
+            "status": "passed"
+          }
+        ],
+        "suite": "firefox > ui/Login.spec.ts > Test suite for login",
+        "attachments": [
+          {
+            "name": "screenshot",
+            "contentType": "image/png",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-b6ff8-Login-with-invalid-username-firefox/test-finished-1.png"
+          },
+          {
+            "name": "trace",
+            "contentType": "application/zip",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-b6ff8-Login-with-invalid-username-firefox/trace.zip"
+          }
+        ],
+        "stdout": [],
+        "stderr": [],
+        "extra": {
+          "annotations": []
+        }
+      },
+      {
+        "name": "LOGIN_06 - Login with empty username",
+        "status": "passed",
+        "duration": 7601,
+        "start": 1746093320,
+        "stop": 1746093328,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "/Users/macbook/Documents/automation/TestAssignment/tests/ui/Login.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "steps": [
+          {
+            "name": "Enter user name, password and click on Login button",
+            "status": "passed"
+          },
+          {
+            "name": "Enter user name",
+            "status": "passed"
+          },
+          {
+            "name": "Enter password",
+            "status": "passed"
+          },
+          {
+            "name": "Click on Login button",
+            "status": "passed"
+          },
+          {
+            "name": "Verify can not login and error message should be displayed",
+            "status": "passed"
+          }
+        ],
+        "suite": "firefox > ui/Login.spec.ts > Test suite for login",
+        "attachments": [
+          {
+            "name": "screenshot",
+            "contentType": "image/png",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-4f267---Login-with-empty-username-firefox/test-finished-1.png"
+          },
+          {
+            "name": "trace",
+            "contentType": "application/zip",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-4f267---Login-with-empty-username-firefox/trace.zip"
+          }
+        ],
+        "stdout": [],
+        "stderr": [],
+        "extra": {
+          "annotations": []
+        }
+      },
+      {
+        "name": "LOGIN_07 - Login with empty password",
+        "status": "passed",
+        "duration": 6572,
+        "start": 1746093330,
+        "stop": 1746093337,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "/Users/macbook/Documents/automation/TestAssignment/tests/ui/Login.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "steps": [
+          {
+            "name": "Enter user name, password and click on Login button",
+            "status": "passed"
+          },
+          {
+            "name": "Enter user name",
+            "status": "passed"
+          },
+          {
+            "name": "Enter password",
+            "status": "passed"
+          },
+          {
+            "name": "Click on Login button",
+            "status": "passed"
+          },
+          {
+            "name": "Verify can not login and error message should be displayed",
+            "status": "passed"
+          }
+        ],
+        "suite": "firefox > ui/Login.spec.ts > Test suite for login",
+        "attachments": [
+          {
+            "name": "screenshot",
+            "contentType": "image/png",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-2b8c8---Login-with-empty-password-firefox/test-finished-1.png"
+          },
+          {
+            "name": "trace",
+            "contentType": "application/zip",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-2b8c8---Login-with-empty-password-firefox/trace.zip"
+          }
+        ],
+        "stdout": [],
+        "stderr": [],
+        "extra": {
+          "annotations": []
+        }
+      },
+      {
+        "name": "LOGIN_08 - Login with both username and password empty",
+        "status": "passed",
+        "duration": 6492,
+        "start": 1746093334,
+        "stop": 1746093340,
+        "rawStatus": "passed",
+        "tags": [],
+        "type": "e2e",
+        "filePath": "/Users/macbook/Documents/automation/TestAssignment/tests/ui/Login.spec.ts",
+        "retries": 0,
+        "flaky": false,
+        "steps": [
+          {
+            "name": "Enter user name, password and click on Login button",
+            "status": "passed"
+          },
+          {
+            "name": "Enter user name",
+            "status": "passed"
+          },
+          {
+            "name": "Enter password",
+            "status": "passed"
+          },
+          {
+            "name": "Click on Login button",
+            "status": "passed"
+          },
+          {
+            "name": "Verify can not login and error message should be displayed",
+            "status": "passed"
+          }
+        ],
+        "suite": "firefox > ui/Login.spec.ts > Test suite for login",
+        "attachments": [
+          {
+            "name": "screenshot",
+            "contentType": "image/png",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-73579-username-and-password-empty-firefox/test-finished-1.png"
+          },
+          {
+            "name": "trace",
+            "contentType": "application/zip",
+            "path": "/Users/macbook/Documents/automation/TestAssignment/test-results/ui-Login-Test-suite-for-lo-73579-username-and-password-empty-firefox/trace.zip"
+          }
+        ],
+        "stdout": [],
+        "stderr": [],
+        "extra": {
+          "annotations": []
+        }
+      }
+    ]
+  }
+}
