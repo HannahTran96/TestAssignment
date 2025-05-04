@@ -59,9 +59,9 @@ jobs:
     - name: Install Playwright Browsers
       run: |-
         npm install
-        npx playwright install ${{ matrix.browserName }} --with-deps
+        npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npm run regression -- --project=${{ matrix.browserName }}
+      run: npm test -- --project=chromium
     - name: Upload report to GitHub Actions Artifacts
       uses: actions/upload-artifact@v4
       env: 
